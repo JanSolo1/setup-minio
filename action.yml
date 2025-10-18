@@ -23,5 +23,5 @@ inputs:
     required: false
     default: 'true'
 runs:
-  using: 'node25'
+  using: 'node24'
   main: 'dist/main.js'
