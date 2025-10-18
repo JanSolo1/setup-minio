@@ -24,4 +24,4 @@ inputs:
     default: 'true'
 runs:
   using: 'node24'
-  main: 'dist/main.js'
+  main: 'dist/index.js'
