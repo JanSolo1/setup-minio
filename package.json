@@ -2,7 +2,7 @@
   "name": "setup-minio",
   "version": "1.0.0",
   "description": "GitHub Action to setup MinIO Client (mc)",
-  "main": "dist/main.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "ncc build src/main.ts -o dist",
     "lint": "eslint . --ext .ts",
