@@ -1,0 +1,26 @@
+name: Test Released Action
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  test-v1-action:
+    name: Verify setup-minio@v1 works
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout current repo
+        uses: actions/checkout@v4
+
+      - name: Run released setup-minio@v1
+        uses: JanSolo1/setup-minio@v1
+        with:
+          mc-version: latest
+
+      - name: Verify mc installation
+        run: |
+          echo "Testing MinIO Client installation..."
+          mc --version
+          which mc
+          mc --help | head -n 5

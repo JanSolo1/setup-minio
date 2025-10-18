@@ -1,0 +1,27 @@
+name: 'Setup MinIO Client'
+description: 'Installs MinIO Client (mc) and optionally configures an alias'
+author: 'JanSolo1'
+inputs:
+  mc-version:
+    description: 'Version of mc to install'
+    required: false
+    default: 'latest'
+  alias:
+    description: 'Optional alias name'
+    required: false
+  endpoint:
+    description: 'MinIO server endpoint'
+    required: false
+  access_key:
+    description: 'Access key'
+    required: false
+  secret_key:
+    description: 'Secret key'
+    required: false
+  insecure:
+    description: 'Allow insecure connection for alias'
+    required: false
+    default: 'true'
+runs:
+  using: 'node25'
+  main: 'dist/main.js'
